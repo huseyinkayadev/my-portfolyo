@@ -1,0 +1,178 @@
+/* Modern siyah tema */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #333333);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+#name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.greeting {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.greeting h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.greeting p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section, .skills-section, .contact-section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-section h3, .skills-section h3, .contact-section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #cccccc;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-section ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.skills-section li {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0;
+    padding: 0.75rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.skills-section li:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    background: linear-gradient(45deg, #333333, #666666);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link:hover {
+    background: linear-gradient(45deg, #666666, #999999);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.contact-link img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-color: black;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    #photo {
+        width: 150px;
+        height: 150px;
+    }
+    #name {
+        font-size: 2rem;
+    }
+    .greeting h2 {
+        font-size: 1.5rem;
+    }
+    .about-section, .skills-section, .contact-section {
+        padding: 1rem;
+    }
+    .skills-section ul {
+        grid-template-columns: 1fr;
+    }
+    .contact-buttons {
+        gap: 1rem;
+    }
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
