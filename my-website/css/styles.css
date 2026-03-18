@@ -1,4 +1,4 @@
-/* Modern siyah tema */
+/* GENEL AYARLAR */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -15,6 +15,7 @@ body {
     padding: 2rem;
 }
 
+/* PROFİL */
 .profile {
     text-align: center;
     margin-bottom: 3rem;
@@ -38,6 +39,7 @@ body {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* GİRİŞ */
 .greeting {
     text-align: center;
     margin-bottom: 4rem;
@@ -46,7 +48,6 @@ body {
 .greeting h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #ffffff;
 }
 
 .greeting p {
@@ -57,7 +58,13 @@ body {
     margin: 0 auto;
 }
 
-.about-section, .skills-section, .contact-section {
+/* TÜM KART BÖLÜMLERİ (TEK YERDEN YÖNETİM) */
+.about-section,
+.skills-section,
+.languages-section,
+.experience-section,
+.abilities-section,
+.contact-section {
     margin-bottom: 4rem;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
@@ -65,46 +72,65 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.about-section h3, .skills-section h3, .contact-section h3 {
+.about-section h3,
+.skills-section h3,
+.languages-section h3,
+.experience-section h3,
+.abilities-section h3,
+.contact-section h3 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #ffffff;
 }
 
+/* PARAGRAF */
 .about-section p {
     line-height: 1.6;
-    margin-bottom: 1rem;
     color: #cccccc;
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 1rem;
 }
 
-.skills-section ul {
+/* LİSTELER (TÜMÜ ORTAK) */
+.skills-section ul,
+.languages-section ul,
+.experience-section ul,
+.abilities-section ul {
     list-style-type: none;
     padding: 0;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* GRID SADECE YETENEKLERDE */
+.skills-section ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
 
-.skills-section li {
+/* TÜM LİST ITEM'LAR (ANİMASYON DAHİL) */
+.skills-section li,
+.languages-section li,
+.experience-section li,
+.abilities-section li {
     background: rgba(0, 0, 0, 0.2);
-    margin: 0;
+    margin: 0.5rem 0;
     padding: 0.75rem;
     border-radius: 5px;
     text-align: center;
-    color: #ffffff;
     transition: all 0.3s ease;
 }
 
-.skills-section li:hover {
+/* HOVER EFEKTİ */
+.skills-section li:hover,
+.languages-section li:hover,
+.experience-section li:hover,
+.abilities-section li:hover {
     background: rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
 }
 
+/* CONTACT */
 .contact-buttons {
     display: flex;
     justify-content: center;
@@ -113,61 +139,32 @@ body {
 }
 
 .contact-link {
+    display: flex;
+    align-items: center;
     background: linear-gradient(45deg, #333333, #666666);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 25px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
 .contact-link:hover {
     background: linear-gradient(45deg, #666666, #999999);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
 }
 
+/* İKON */
 .contact-link img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-right: 8px;
-    vertical-align: middle;
     background-color: black;
     border-radius: 50%;
     object-fit: cover;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Responsive tasarım */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-    #photo {
-        width: 150px;
-        height: 150px;
-    }
-    #name {
-        font-size: 2rem;
-    }
-    .greeting h2 {
-        font-size: 1.5rem;
-    }
-    .about-section, .skills-section, .contact-section {
-        padding: 1rem;
-    }
-    .skills-section ul {
-        grid-template-columns: 1fr;
-    }
-    .contact-buttons {
-        gap: 1rem;
-    }
-}
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 20px;
@@ -175,4 +172,114 @@ body {
     color: #aaaaaa;
     font-size: 0.9rem;
     border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    #photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    #name {
+        font-size: 2rem;
+    }
+
+    .greeting h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-section ul {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-buttons {
+        gap: 1rem;
+    }
+}
+#photo {
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+#photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255,255,255,0.6);
+}
+.projects-section ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projects-section li {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0.5rem 0;
+    padding: 0;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.projects-section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.projects-section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.projects-section ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projects-section li {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.projects-section li:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+.contact-note {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.language-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#languageSelect {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
 }
